@@ -4,7 +4,7 @@
 const db = require('./db')
 const express = require('express');
 require('dotenv').config()
-var cors = require('cors')
+const cors = require('cors')
 const app = express();
 const listrouter = require('./routes/user')
 const profilerouter = require("./routes/profile")
@@ -23,7 +23,9 @@ db.connectToPostgres();
 // pool.connect().then(()=> console.log("connected"))
 
 // const PORT = process.env.PORT||5000
-app.use(cors())
+app.use(cors({
+  // origin:"https://mentorship-platfrom-backend.vercel.app/"
+}))
 app.use(express.json());
 
 app.get('/api/users', listrouter.getUsers)
