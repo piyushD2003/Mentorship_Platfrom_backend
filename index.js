@@ -23,7 +23,7 @@ db.connectToPostgres();
 // pool.connect().then(()=> console.log("connected"))
 
 app.use(express.json());
-const PORT = 5000
+const PORT = process.env.PORT||5000
 app.use(cors())
 
 app.get('/api/users', listrouter.getUsers)
@@ -49,6 +49,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
+
+module.exports = app
 // const hello = http.createServer((req, res)=>{
 //     res.writeHead(200, { "Content-Type": "text/html" });
 
