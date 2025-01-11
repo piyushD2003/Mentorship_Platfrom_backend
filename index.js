@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
     res.send('Hello World Mentorship!');
   });
   
-app.listen(PORT, () => {
+app.listen(() => {
     console.log(`Mentorship platform backen running on port`);
   });
 
