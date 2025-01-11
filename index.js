@@ -53,25 +53,23 @@ app.listen(() => {
   });
 
 module.exports = app
-// const hello = http.createServer((req, res)=>{
-//     res.writeHead(200, { "Content-Type": "text/html" });
 
-//     const url = req.url
-
-//     if (url === '/'){
-//         res.write(' Welcome to Login us page');
-//         res.end();
+// {
+//   "version": 2,
+//   "builds": [
+//     {
+//       "src": "*.js",
+//       "use": "@vercel/node"
 //     }
-//     else if (url ==='/login'){
-//         // console.log(req);
-        
-//         res.write(' Welcome to Login page');
-//         res.end();
+//   ],
+//   "routes": [
+//     {
+//       "src": "/(.*)",
+//       "dest": "/",
+//       "methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+//           "headers":{
+//               "Access-Control-Allow-Origin": "*"
+//           }
 //     }
-// })
-
-// // hello();
-
-// const PORT = process.env.PORT || 3001
-// hello.listen(PORT)
-// console.log(`Server running on http://localhost:${PORT}`);
+//   ]
+// }  
