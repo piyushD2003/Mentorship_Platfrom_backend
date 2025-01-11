@@ -22,9 +22,9 @@ db.connectToPostgres();
 // });
 // pool.connect().then(()=> console.log("connected"))
 
-app.use(express.json());
-const PORT = process.env.PORT||5000
+// const PORT = process.env.PORT||5000
 app.use(cors())
+app.use(express.json());
 
 app.get('/api/users', listrouter.getUsers)
 app.get('/api/users/:id', listrouter.getUserbyId)
@@ -46,9 +46,9 @@ app.get('/', (req, res) => {
     res.send('Hello World Mentorship!');
   });
   
-// app.listen(PORT, () => {
-//     console.log(`Server running on http://localhost:${PORT}`);
-//   });
+app.listen(PORT, () => {
+    console.log(`Mentorship platform backen running on port`);
+  });
 
 module.exports = app
 // const hello = http.createServer((req, res)=>{
