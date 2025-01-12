@@ -11,6 +11,7 @@ const profilerouter = require("./routes/profile")
 const connectionrouter = require("./routes/connection")
 // dotenv.config()
 // const {Pool} = require('pg')
+
 db.connectToPostgres();
 // // PostgreSQL Pool Setup
 // const pool = new Pool({
@@ -48,9 +49,9 @@ app.get('/', (req, res) => {
     res.send('Hello World Mentorship!');
   });
   
-app.listen(() => {
-    console.log(`Mentorship platform backen running on port`);
-  });
+// app.listen(PORT,() => {
+//     console.log(`Mentorship platform backen running on port http://localhost:${PORT}/`);
+//   });
 
 module.exports = app
 
